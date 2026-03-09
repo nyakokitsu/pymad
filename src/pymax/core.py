@@ -171,7 +171,7 @@ class MaxClient(ApiMixin, WebSocketMixin, BaseClient):
         self._ssl_context = ssl.create_default_context()
         self._ssl_context.set_ciphers("DEFAULT")
         self._ssl_context.check_hostname = True
-        self._ssl_context.verify_mode = ssl.CERT_REQUIRED
+        #self._ssl_context.verify_mode = ssl.CERT_REQUIRED
         self._ssl_context.minimum_version = ssl.TLSVersion.TLSv1_2
         self._ssl_context.load_default_certs()
         self._socket: socket.socket | None = None
